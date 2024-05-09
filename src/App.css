@@ -4,27 +4,91 @@
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  color: white;
-  background-image: linear-gradient(79deg, rgb(0, 16, 85), rgb(0, 0, 168), rgb(0, 69, 135), rgb(255, 255, 255));
+  color: rgb(255, 255, 255);
+  background-image: url('./imagemfundo.jpg');
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.divider-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.divider {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid black;
+  margin: 0 8px; 
+}
+
+.divider-text {
+  padding: 0 6px; 
+  font-size: x-large;
+  font-weight: 100;
+}
+
+
+.auth-form-container {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  padding: 20px;
+  border: 1px solid white; 
+  background-color: white; 
+  border-radius: 10px; 
+}
+
+@media screen and (min-width: 600px) {
+.auth-form-container {
+  padding: 3rem;
+  margin: 5rem auto; 
+  width: 32%;
+}
 }
 
 .auth-form-container, .login-form, .register-form {
   display: flex;
   flex-direction: column;
+  color: black;
 }
 
-@media screen and (min-width: 600px) {
-  .auth-form-container {
-    padding: 5rem;
-    border: 1px solid white;
-    border-radius: 10px;
-    margin: 0.5rem;
-  }
+.auth-form-container h4 a {
+  color: rgba(94, 94, 94, 0.863); 
+  text-decoration: underline; 
+  cursor: pointer; 
+}
+
+.auth-form-container h4 a:hover {
+  color: rgba(22, 22, 22, 0.863);
+}
+
+.auth-form-container h2 {
+  margin-bottom: 3px; 
+}
+
+.auth-form-container h4 {
+  margin-top: 3px; 
+}
+
+
+.auth-form-container label {
+  margin-bottom: -7px;
+}
+
+
+h4 {
+  font-weight: 100;
+  color: rgba(66, 66, 66, 0.863);
 }
 
 label {
   text-align: left;
   padding: 0.25rem 0;
+  color: rgba(66, 66, 66, 0.863);
+  font-size: small;
 }
 
 input {
@@ -32,19 +96,21 @@ input {
   padding: 1rem;
   border: none;
   border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(221, 220, 220, 0.863);
 }
 
 button {
   border: none;
-  background-color: white;
+  background-color: rgb(0, 0, 168);
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
-  color: rgb(0, 0, 168);
+  color: white;
 }
 
 .link-btn {
   background: none;
-  color: white;
+  color: black;
   text-decoration: underline;
 }

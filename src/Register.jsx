@@ -4,7 +4,6 @@ export const Register = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const [name, setName] = useState('');
-    const [lastname, setLastName] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -13,19 +12,17 @@ export const Register = (props) => {
 
     return (
         <div className="auth-form-container">
-            <h2>Cadastrar</h2>
+            <h2>Não possui uma conta? Cadastre-se!</h2>
+            <h4 >Já possui uma conta? <a href="#" onClick={() => props.onFormSwitch('login')}>Realize login</a>.</h4>
         <form className="register-form" onSubmit={handleSubmit}>
-            <label htmlFor="name">Primeiro nome:</label>
-            <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="primeiro nome" />
-            <label htmlFor="lastname">Último nome:</label>
-            <input value={lastname} name="lastname" onChange={(e) => setLastName(e.target.value)} id="lastname" placeholder="último nome" />
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="name">Seu nome</label>
+            <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="nome completo" />
+            <label htmlFor="email">Seu email</label>
             <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="seuemail@gmail.com" id="email" name="email" />
-            <label htmlFor="password">Senha:</label>
+            <label htmlFor="password">Sua senha</label>
             <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-            <button type="submit">Entrar</button>
+            <button type="submit">Cadastrar</button>
         </form>
-        <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Já tem uma conta, faça login clicando aqui!</button>
     </div>
     )
 }
