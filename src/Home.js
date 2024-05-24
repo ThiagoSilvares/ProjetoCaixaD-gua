@@ -7,7 +7,6 @@ import { useUser } from "./UserContext";
 const { Content } = Layout;
 
 const Home = () => {
-  const { userEmail } = useUser();
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
@@ -16,7 +15,7 @@ const Home = () => {
         <Content style={{ margin: "0 16px" }}>
 
           <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-            <h1>Hello {userEmail} and welcome to the home</h1>
+            <h1>Hello and welcome to the home</h1>
           </div>
         </Content>
       </Layout>

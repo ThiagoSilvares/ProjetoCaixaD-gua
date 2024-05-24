@@ -10,7 +10,6 @@ const { Content } = Layout;
 
 const Profile = () => {
 
-  const { userEmail } = useUser();
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
@@ -23,7 +22,7 @@ const Profile = () => {
               <div style={{ display: "flex", alignItems: "center" }}>
                 <Avatar size={64} icon={<UserOutlined />} style={{ marginRight: 16 }} />
                 <div>
-                  <p><strong>Email:</strong> {userEmail}</p>
+                  <p><strong>Email:</strong></p>
                 </div>
               </div>
             </div>
