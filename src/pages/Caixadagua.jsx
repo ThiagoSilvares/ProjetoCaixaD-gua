@@ -6,7 +6,7 @@ import "../styles/Dashboard.css"; // Importe o arquivo CSS
 
 const { Content } = Layout;
 
-const Configuracoes = () => {
+const Caixadagua = () => {
   const lineChartRef = useRef(null);
   const barChartRef = useRef(null);
   const humidityChartRef = useRef(null);
@@ -225,100 +225,98 @@ const Configuracoes = () => {
     });
 
     const temperatureChart = new Chart(temperatureChartRef.current, {
-        type: "bar",
-        data: {
-          labels: ["Data 1", "Data 2", "Data 3", "Data 4", "Data 5"],
-          datasets: [{
-            label: "Temperatura por Dia",
-            data: chartData.temperature,
-            backgroundColor: "rgb(7, 0, 105)"
-          }]
-        },
-        options: {
-          maintainAspectRatio: false,
-          plugins: {
-            title: {
-              display: true,
-              text: "Dados de Temperatura",
-              font: {
-                size: 18,
-                family: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-                color: "#000000"
-              }
-            },
-            legend: {
-              display: false
+      type: "bar",
+      data: {
+        labels: ["Data 1", "Data 2", "Data 3", "Data 4", "Data 5"],
+        datasets: [{
+          label: "Temperatura por Dia",
+          data: chartData.temperature,
+          backgroundColor: "rgb(7, 0, 105)"
+        }]
+      },
+      options: {
+        maintainAspectRatio: false,
+        plugins: {
+          title: {
+            display: true,
+            text: "Dados de Temperatura",
+            font: {
+              size: 18,
+              family: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+              color: "#000000"
             }
+          },
+          legend: {
+            display: false
           }
         }
-      });
+      }
+    });
   
-      const tensionChart = new Chart(tensionChartRef.current, {
-        type: "line",
-        data: tensionChartData,
-        options: tensionChartOptions,
-      });
+    const tensionChart = new Chart(tensionChartRef.current, {
+      type: "line",
+      data: tensionChartData,
+      options: tensionChartOptions,
+    });
   
-      const lineChart = new Chart(lineChartRef.current, {
-        type: "line",
-        data: lineChartData,
-        options: lineChartOptions,
-      });
+    const lineChart = new Chart(lineChartRef.current, {
+      type: "line",
+      data: lineChartData,
+      options: lineChartOptions,
+    });
   
-      const barChart = new Chart(barChartRef.current, {
-        type: "bar",
-        data: barChartData,
-        options: barChartOptions,
-      });
+    const barChart = new Chart(barChartRef.current, {
+      type: "bar",
+      data: barChartData,
+      options: barChartOptions,
+    });
   
-      // Limpeza dos gráficos quando o componente for desmontado
-      return () => {
-        humidityChart.destroy();
-        temperatureChart.destroy();
-        tensionChart.destroy();
-        lineChart.destroy();
-        barChart.destroy();
-      };
-    }, [chartData]);
-  
-    return (
-        <Layout style={{ minHeight: "100vh" }}>
-          <Sidebar />
-          <Layout className="site-layout" style={{ marginLeft: 200 }}>
-            <Content>
-              <div className="page-content">
-                <div className="dashboard-header">
-                  <h1>Dashboard de Monitoramento</h1>
+    // Limpeza dos gráficos quando o componente for desmontado
+    return () => {
+      humidityChart.destroy();
+      temperatureChart.destroy();
+      tensionChart.destroy();
+      lineChart.destroy();
+      barChart.destroy();
+    };
+  }, [chartData]);
+
+  return (
+    <Layout style={{ minHeight: "100vh" }}>
+      <Sidebar />
+      <Layout className="site-layout" style={{ marginLeft: 200 }}>
+        <Content>
+          <div className="page-content">
+            <div className="dashboard-header">
+              <h1>Dashboard de Monitoramento</h1>
+            </div>
+            <div className="site-layout-background">
+              <div className="chart-container">
+                <div className="chart-wrapper" style={{ width: "40%", height: "400px", marginBottom: "15px" }}>
+                  <canvas ref={lineChartRef}></canvas>
+                  <div className="chart-info">Nível Atual da Água: {waterLevel}%</div>
                 </div>
-                <div className="site-layout-background">
-                  <div className="chart-container">
-                    <div className="chart-wrapper" style={{ width: "40%", height: "400px" }}> {/* Ajustado tamanho */}
-                      <canvas ref={lineChartRef}></canvas>
-                      <div className="chart-info">Nível Atual da Água: {waterLevel}%</div>
-                    </div>
-                    <div className="chart-wrapper" style={{ width: "40%", height: "400px" }}> {/* Ajustado tamanho */}
-                      <canvas ref={barChartRef}></canvas>
-                    </div>
-                    <div className="chart-wrapper" style={{ width: "40%", height: "400px" }}> {/* Ajustado tamanho */}
-                      <canvas ref={humidityChartRef}></canvas>
-                      <p className="chart-info">Umidade Atual: {chartData.humidity[chartData.humidity.length - 1]}%</p>
-                    </div>
-                    <div className="chart-wrapper" style={{ width: "40%", height: "400px" }}> {/* Ajustado tamanho */}
-                      <canvas ref={temperatureChartRef}></canvas>
-                      <p className="chart-info">Temperatura Atual: {chartData.temperature[chartData.temperature.length - 1]}°C</p>
-                    </div>
-                    <div className="chart-wrapper" style={{ width: "40%", height: "400px" }}> {/* Ajustado tamanho */}
-                      <canvas ref={tensionChartRef}></canvas>
-                    </div>
-                  </div>
+                <div className="chart-wrapper" style={{ width: "40%", height: "400px", marginBottom: "15px" }}>
+                  <canvas ref={barChartRef}></canvas>
+                </div>
+                <div className="chart-wrapper" style={{ width: "40%", height: "400px", marginBottom: "15px" }}>
+                  <canvas ref={humidityChartRef}></canvas>
+                  <p className="chart-info">Umidade Atual: {chartData.humidity[chartData.humidity.length - 1]}%</p>
+                </div>
+                <div className="chart-wrapper" style={{ width: "40%", height: "400px", marginBottom: "15px" }}>
+                  <canvas ref={temperatureChartRef}></canvas>
+                  <p className="chart-info">Temperatura Atual: {chartData.temperature[chartData.temperature.length - 1]}°C</p>
+                </div>
+                <div className="chart-wrapper" style={{ width: "40%", height: "400px", marginBottom: "15px" }}>
+                  <canvas ref={tensionChartRef}></canvas>
                 </div>
               </div>
-            </Content>
-          </Layout>
-        </Layout>
-      );
-      
-  };
-  
-  export default Configuracoes;
-  
+            </div>
+          </div>
+        </Content>
+      </Layout>
+    </Layout>
+  );
+};
+
+export default Caixadagua;

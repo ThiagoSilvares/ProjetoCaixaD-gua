@@ -10,22 +10,30 @@ import {
 } from "@ant-design/icons";
 import "../styles/sidebar.css";
 import Automacao from "../images/automacao.png";
+import Profile from "../images/profile.png";
 import { Layout, Menu } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-
 
 const { Header, Sider, Content } = Layout;
 
 const Navbar = () => {
   return (
-    <Header style={{ background: "#fff", padding: 0, zIndex: 1, width: '100%', position: 'fixed', top: 0 }}>
-      <div className="searchContainer" style={{ position: 'relative', width: '550px', margin: '0 auto' }}>
-        <SearchOutlined style={{ color: '#0056b3', fontSize: '20px', position: 'absolute', left: '10px', top: '43%', transform: 'translateY(-50%)' }} />
-        <input type="text" placeholder="Procure aqui" style={{ paddingLeft: '37px', borderRadius: '5px', width: '100%', height: '40px', border: '1px solid #ccc' }} />
+    <Header className="navbar">
+      <div className="searchContainer">
+        <SearchOutlined className="searchIcon" />
+        <input type="text" placeholder="Procure aqui" className="searchInput" />
+      </div>
+      <div className="userInfoContainer">
+        <img src={Profile} alt="Profile" className="profileImage" />
+        <div className="userInfo">
+          <div className="userName">Thiago Silvares</div>
+          <div className="userEmail">22.01819-0@maua.br</div>
+        </div>
       </div>
     </Header>
   );
 };
+
 
 const Sidebar = () => {
   const location = useLocation();
@@ -83,9 +91,9 @@ const MainLayout = ({ children }) => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Sidebar />
-      <Layout style={{ marginLeft: 43 }}>
+      <Layout style={{ marginLeft: 200 }}> {/* Ajuste a largura para corresponder ao sidebar */}
         <Navbar />
-        <Content style={{ marginTop: 10, padding: 20 }}>
+        <Content className="content" style={{ padding: 20 }}>
           {children}
         </Content>
       </Layout>

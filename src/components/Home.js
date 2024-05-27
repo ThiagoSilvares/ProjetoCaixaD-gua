@@ -21,6 +21,8 @@ const Home = () => {
     switch (location.pathname) {
       case "/":
         return <Column data={chartData} xField="item" yField="value" />;
+      case "/caixadagua":
+        return <Line data={chartData} xField="item" yField="value" />;
       case "/smartlights":
         return <Line data={chartData} xField="item" yField="value" />;
       case "/alertas":
