@@ -48,4 +48,8 @@
     background-color: white;
   }
   
-  
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

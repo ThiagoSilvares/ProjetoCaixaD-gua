@@ -35,17 +35,5 @@ const Home = () => {
         return null;
     }
   };
-
-  return (
-    <MainLayout>
-      <Content>
-        <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-          <h1>Hello and welcome to the home</h1>
-          {renderChart()}
-        </div>
-      </Content>
-    </MainLayout>
-  );
 };
-
 export default Home;

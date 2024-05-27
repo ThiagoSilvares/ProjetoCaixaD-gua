@@ -11,12 +11,18 @@ import {
 import "../styles/sidebar.css";
 import Automacao from "../images/automacao.png";
 import { Layout, Menu } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
+
 
 const { Header, Sider, Content } = Layout;
 
 const Navbar = () => {
   return (
-    <Header style={{ background: "#fff", padding: 0, zIndex: 1, width: '100%', position: 'fixed' }}>
+    <Header style={{ background: "#fff", padding: 0, zIndex: 1, width: '100%', position: 'fixed', top: 0 }}>
+      <div className="searchContainer" style={{ position: 'relative', width: '550px', margin: '0 auto' }}>
+        <SearchOutlined style={{ color: '#0056b3', fontSize: '20px', position: 'absolute', left: '10px', top: '43%', transform: 'translateY(-50%)' }} />
+        <input type="text" placeholder="Procure aqui" style={{ paddingLeft: '37px', borderRadius: '5px', width: '100%', height: '40px', border: '1px solid #ccc' }} />
+      </div>
     </Header>
   );
 };
