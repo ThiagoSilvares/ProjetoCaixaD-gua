@@ -1,37 +1,44 @@
-import React, { useState } from "react";
-import logo from './logo.svg';
-import './App.css';
-import {Login} from "./Login";
-import {Register} from "./Register";
-import Home from "./Home";
-import Profile from "./Sidebar/Profile";
-import Chart1 from "./Sidebar/Chart1";
-import Chart2 from "./Sidebar/Chart2";
-import Chart3 from "./Sidebar/Chart3";
-import { Navigate, BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
+import {Login} from "./login/Login";
+import {Register} from "./login/Register";
+import Home from "./components/Home";
+// import Profile from "./pages/Profile";
+import Caixadagua from "./pages/Caixadagua";
+import Suporte from "./pages/Suporte";
+import Historico from "./pages/Historico";
+import Alertas from "./pages/Alertas";
+import Configuracoes from "./pages/Configuracoes";
+import SmartLights from "./pages/SmartLights";
+import Sidebar from "./components/Sidebar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
-  return (
-
-<div className="App">
-    <Router>
-      <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/home" element={<Home />} /> 
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/chart1" element={<Chart1 />} />
-        <Route path="/chart2" element={<Chart2 />} />
-        <Route path="/chart3" element={<Chart3 />} />
-      </Routes>
-    </Router>
-</div>
- 
+    function SidebarLayout() {
+      return (
+        <div className="App">
+          <Sidebar/>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/caixadagua" element={<Caixadagua />} />
+              <Route path="/suporte" element={<Suporte />} />
+              <Route path="/historico" element={<Historico />} />
+              <Route path="/configuracoes" element={<Configuracoes />} />
+              <Route path="/smartlights" element={<SmartLights />} />
+              <Route path="/alertas" element={<Alertas />} />
+            </Routes>
+        </div>
+      );
+    }
     
-  );
-
-  
-}
+    function App() {
+      return (
+        <Router>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/*" element={<SidebarLayout />} />
+          </Routes>
+        </Router>
+      );
+    }
 
 export default App;

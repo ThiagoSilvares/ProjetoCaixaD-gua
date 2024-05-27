@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation, useNavigate} from "react-router-dom";
 import { Layout, Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
-import Sidebar from "../Sidebar";
+import Sidebar from "../components/Sidebar";
 import { useUser } from "../UserContext";
 
 

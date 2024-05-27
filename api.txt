@@ -1,0 +1,180 @@
+{
+        "fields": {
+            "data_counter_0d_0": null,
+            "data_counter_0d_1": null,
+            "data_humidity": null,
+            "data_temperature": null,
+            "fCnt": 135,
+            "rxInfo_altitude_0": 777,
+            "rxInfo_latitude_0": -23.64946,
+            "rxInfo_loRaSNR_0": 11,
+            "rxInfo_longitude_0": -46.57367,
+            "rxInfo_rssi_0": -97,
+            "txInfo_dataRate_spreadFactor": 9,
+            "txInfo_frequency": 916200000
+        },
+        "name": "ArtesianWell",
+        "tags": {
+            "applicationID": "17",
+            "applicationName": "SmartCampusMaua",
+            "devEUI": "0004a30b0040100c",
+            "fPort": "100",
+            "host": "d29a0b90e22b",
+            "nodeName": "ArtesianWell_1",
+            "rxInfo_mac_0": "7276ff000b031df7",
+            "rxInfo_mac_1": "7276ff00080801db",
+            "rxInfo_name_0": "IMT-kerlink-blocoW2",
+            "rxInfo_name_1": "IMT-kerlink-blocoH",
+            "txInfo_adr": "true",
+            "txInfo_codeRate": "4/5",
+            "txInfo_dataRate_bandwidth": "125",
+            "txInfo_dataRate_modulation": "LORA",
+            ""data_waterLevel":"
+        },
+        "timestamp": 1716219541712376660
+    },
+
+
+        "fields": {
+            "data_boardVoltage": 1.606,
+            "data_counter": 999,
+            "fCnt": 135,
+            "rxInfo_altitude_0": 777,
+            "rxInfo_altitude_1": 758,
+            "rxInfo_latitude_0": -23.64946,
+            "rxInfo_latitude_1": -23.64891,
+            "rxInfo_loRaSNR_0": 11,
+            "rxInfo_loRaSNR_1": 11,
+            "rxInfo_longitude_0": -46.57367,
+            "rxInfo_longitude_1": -46.57413,
+            "rxInfo_rssi_0": -97,
+            "rxInfo_rssi_1": -100,
+            "txInfo_dataRate_spreadFactor": 9,
+            "txInfo_frequency": 916200000
+        },
+        "name": "Hidrometer",
+        "tags": {
+            "applicationID": "17",
+            "applicationName": "SmartCampusMaua",
+            "devEUI": "0004a30b00101008",
+            "fPort": "100",
+            "host": "d29a0b90e22b",
+            "nodeName": "Hidrometer_8",
+            "rxInfo_mac_0": "7276ff000b031df7",
+            "rxInfo_mac_1": "7276ff00080801db",
+            "rxInfo_name_0": "IMT-kerlink-blocoW2",
+            "rxInfo_name_1": "IMT-kerlink-blocoH",
+            "txInfo_adr": "true",
+            "txInfo_codeRate": "4/5",
+            "txInfo_dataRate_bandwidth": "125",
+            "txInfo_dataRate_modulation": "LORA"
+            ""
+        },
+        "timestamp": 1716219541705440028
+    },
+
+    {
+        "fields": {
+            "data_counter_0d_0": 1991,
+            "data_counter_0d_1": 3261,
+            "data_humidity": null,
+            "data_temperature": null,
+            "fCnt": 135,
+            "rxInfo_altitude_0": 777,
+            "rxInfo_latitude_0": -23.64946,
+            "rxInfo_loRaSNR_0": 11,
+            "rxInfo_longitude_0": -46.57367,
+            "rxInfo_rssi_0": -97,
+            "txInfo_dataRate_spreadFactor": 9,
+            "txInfo_frequency": 916200000
+        },
+        "name": "SmartLights",
+        "tags": {
+            "applicationID": "17",
+            "devEUI": "0004a30b00000006",
+            "fPort": "100",
+            "nodeName": "SmartLight_6",
+            "rxInfo_mac_0": "7276ff000b031df7",
+            "rxInfo_name_0": "IMT-kerlink-blocoW2",
+            "txInfo_adr": "true",
+            "txInfo_codeRate": "4/5",
+            "txInfo_dataRate_bandwidth": "125",
+            "txInfo_dataRate_modulation": "LORA"
+        },
+        "timestamp": 1716219541813064019
+    },
+
+    {
+        "fields": {
+            "data_boardVoltage": 0.129,
+            "data_distance": 1727,
+            "fCnt": 135,
+            "rxInfo_altitude_0": 777,
+            "rxInfo_altitude_1": 758,
+            "rxInfo_latitude_0": -23.64946,
+            "rxInfo_latitude_1": -23.64891,
+            "rxInfo_loRaSNR_0": 11,
+            "rxInfo_loRaSNR_1": 11,
+            "rxInfo_longitude_0": -46.57367,
+            "rxInfo_longitude_1": -46.57413,
+            "rxInfo_rssi_0": -97,
+            "rxInfo_rssi_1": -100,
+            "txInfo_dataRate_spreadFactor": 9,
+            "txInfo_frequency": 916200000
+        },
+        "name": "WaterTankLevel",
+        "tags": {
+            "applicationID": "17",
+            "applicationName": "SmartCampusMaua",
+            "devEUI": "0004a30b00001008",
+            "fPort": "100",
+            "host": "d29a0b90e22b",
+            "nodeName": "WaterTankLavel_8",
+            "rxInfo_mac_0": "7276ff000b031df7",
+            "rxInfo_mac_1": "7276ff00080801db",
+            "rxInfo_name_0": "IMT-kerlink-blocoW2",
+            "rxInfo_name_1": "IMT-kerlink-blocoH",
+            "txInfo_adr": "true",
+            "txInfo_codeRate": "4/5",
+            "txInfo_dataRate_bandwidth": "125",
+            "txInfo_dataRate_modulation": "LORA"
+        },
+        "timestamp": 1716219541604896388
+    },
+
+Acesso aos dados dos dispositivos LoRa em funcionamento do SmartCampusMaua podem ser acessados via:
+
+    REST API para dados históricos:(https://github.com/OpenDataTelemetry/timeseries-api 
+
+    Links to an external site.) 
+    MQTT para dados online:
+
+            Host: mqtt://smartcampus.maua.br:1883
+            User/Password: PUBLIC/public
+
+            Topic: SmartCampusMaua/smartcampusmaua/+/+
+
+    Grafana para Visualização e Alertas: (https://github.com/SmartCampusMaua/Docs/tree/develop/Tools/Grafana 
+
+    Links to an external site.)
+
+    Pandas para Análise de Dados e integração com a API (Python):(https://github.com/SmartCampusMaua/Docs/tree/doc/ 
+
+Links to an external site.develop Links to an external site./Tools/Analytics
+
+    Links to an external site.)
+
+Também disponibilizamos de forma OpenSource o framework que utilizaremos para o desenvolvimento da plataforma do SmartCampusMaua3.0 para:
+
+    Web (NextJS - ReactJS, Typescript):(https://github.com/SmartCampusMaua/smartcampusmaua-web 
+
+    Links to an external site.)
+
+    Mobile (Expo - ReactNative, Typescript):(https://github.com/SmartCampusMaua/smartcampusmaua-mobile 
+
+Links to an external site.)
+Server (NestJS, Typescript):(https://github.com/SmartCampusMaua/smartcampusmaua-server
+
+    Links to an external site.)
+
+Além disso, caso alguém ainda deseje trabalhar na plataforma de dados do OpenDataTelemetry ou implementar novas funções e conexões, disponibilizamos também o projeto OpenSource de acordo com os repositórios em: https://github.com/orgs/OpenDataTelemetry/repositories
