@@ -10,8 +10,8 @@
   }
   
   .chart-wrapper {
-    width: 45%; /* Ajuste o tamanho conforme necessário */
-    height: 400px; /* Mantenha a altura conforme desejado */
+    width: 45%; 
+    height: 400px;
     margin: 20px;
   }
   
@@ -25,8 +25,8 @@
   .page-content {
     position: absolute;
     margin: 10px;
-    top: 64px; /* Altura do cabeçalho */
-    left: 200px; /* Largura da barra lateral */
+    top: 64px;
+    left: 200px;
     right: 0;
   }
   .water-level-box{

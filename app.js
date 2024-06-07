@@ -7,7 +7,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 
-//login
 app.get("/",cors(),(req,res)=>{
 
 })
@@ -32,8 +31,6 @@ app.post("/",async(req,res)=>{
     }
 })
 
-
-//register
 app.get("/register",cors(),(req,res)=>{
 
 })

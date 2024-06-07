@@ -91,7 +91,7 @@ const MainLayout = ({ children }) => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Sidebar />
-      <Layout style={{ marginLeft: 200 }}> {/* Ajuste a largura para corresponder ao sidebar */}
+      <Layout style={{ marginLeft: 200 }}>
         <Navbar />
         <Content className="content" style={{ padding: 20 }}>
           {children}

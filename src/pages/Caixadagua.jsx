@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Chart from "chart.js/auto";
 import { Layout } from "antd";
 import Sidebar from "../components/Sidebar";
-import "../styles/Dashboard.css"; // Importe o arquivo CSS
+import "../styles/Dashboard.css"; 
 
 const { Content } = Layout;
 
@@ -271,7 +271,6 @@ const Caixadagua = () => {
       options: barChartOptions,
     });
   
-    // Limpeza dos gráficos quando o componente for desmontado
     return () => {
       humidityChart.destroy();
       temperatureChart.destroy();
