@@ -22,7 +22,7 @@ export const Register = () => {
                     alert("User already exists");
                     history("/login");
                 } else if (res.data === "not exist") {
-                    history("/home", { state: { id: name } });
+                    history("/login", { state: { id: name } });
                 }
             })
             .catch(e => {
