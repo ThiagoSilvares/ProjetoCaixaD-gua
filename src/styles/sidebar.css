@@ -1,3 +1,4 @@
+
 .navbar {
   background: #fff;
   padding: 0;
@@ -68,6 +69,20 @@
   margin-top: 2px;
 }
 
+@media screen and (max-width: 768px) {
+  .searchContainer {
+    display: none;
+  }
+  
+  .userInfoContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .userName, .userEmail {
+    font-size: 0.8em;
+  }
+}
 .sidebar {
   position: fixed;
   top: 64px;
@@ -77,6 +92,50 @@
   overflow: auto;
   background: #fff;
   width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  margin: 10px;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: #333;
+  transition: transform 0.3s ease;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Responsividade */
+@media screen and (max-width: 992px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .hamburger {
+    display: flex;
+  }
 }
 
 .sidebar .ant-menu-item:hover {
@@ -129,3 +188,4 @@
 .sidebar {
   background-color: white;
 }
+

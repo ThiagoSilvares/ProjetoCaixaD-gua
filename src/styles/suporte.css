@@ -1,3 +1,5 @@
+
+
 .container {
   position: absolute;
   top: 64px;
@@ -5,30 +7,59 @@
   right: 0;
   bottom: 0;
   overflow: auto; 
+  padding: -25px; 
+  box-sizing: border-box;
 }
 
-@media screen and (max-width: 992px) {
+@media (max-width: 768px) {
   .container {
-      left: 0;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .main-content {
+    padding: 10px;
+    margin-left: 0;
   }
 }
 
 .content {
-  max-width: 800px;
+  max-width: calc(100% - 90px); 
   padding: 20px;
   text-align: center;
   margin: 0 auto;
 }
 
+.faq-container {
+  margin-top: 40px;
+  margin-bottom: 30px; 
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  text-align: left;
+  max-width: calc(100% - 90px); 
+  margin-left: auto; 
+  margin-right: auto; 
+}
 
 .form-container {
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-bottom: 40px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
   text-align: center;
+  max-width: calc(100% - 90px); 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form-container h2 {
@@ -80,6 +111,8 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
   text-align: left;
+  max-width: calc(100% - 90px); 
+  margin: 0 auto;
 }
 
 .faq-container h2 {
@@ -103,8 +136,6 @@
 .faq-container li p {
   margin: 0;
 }
-
-
 
 .faq-item {
   margin-bottom: 20px;
@@ -144,3 +175,4 @@
 .arrow.open {
   transform: rotate(180deg);
 }
+

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from "react";
 import Chart from "chart.js/auto";
 import { Layout } from "antd";
@@ -291,22 +292,22 @@ const Caixadagua = () => {
             </div>
             <div className="site-layout-background">
               <div className="chart-container">
-                <div className="chart-wrapper" style={{ width: "40%", height: "400px", marginBottom: "15px" }}>
+                <div className="chart-wrapper" style={{ width: "40%", height: "450px", marginBottom: "40px" }}>
                   <canvas ref={lineChartRef}></canvas>
                   <div className="chart-info">Nível Atual da Água: {waterLevel}%</div>
                 </div>
-                <div className="chart-wrapper" style={{ width: "40%", height: "400px", marginBottom: "15px" }}>
+                <div className="chart-wrapper" style={{ width: "40%", height: "450px", marginBottom: "40px" }}>
                   <canvas ref={barChartRef}></canvas>
                 </div>
-                <div className="chart-wrapper" style={{ width: "40%", height: "400px", marginBottom: "15px" }}>
+                <div className="chart-wrapper" style={{ width: "40%", height: "450px", marginBottom: "50px" }}>
                   <canvas ref={humidityChartRef}></canvas>
                   <p className="chart-info">Umidade Atual: {chartData.humidity[chartData.humidity.length - 1]}%</p>
                 </div>
-                <div className="chart-wrapper" style={{ width: "40%", height: "400px", marginBottom: "15px" }}>
+                <div className="chart-wrapper" style={{ width: "40%", height: "450px", marginBottom: "50px" }}>
                   <canvas ref={temperatureChartRef}></canvas>
                   <p className="chart-info">Temperatura Atual: {chartData.temperature[chartData.temperature.length - 1]}°C</p>
                 </div>
-                <div className="chart-wrapper" style={{ width: "40%", height: "400px", marginBottom: "15px" }}>
+                <div className="chart-wrapper" style={{ width: "40%", height: "450px", marginBottom: "0px" }}>
                   <canvas ref={tensionChartRef}></canvas>
                 </div>
               </div>

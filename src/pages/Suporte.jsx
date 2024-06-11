@@ -1,3 +1,5 @@
+
+
 import React, { useState } from "react";
 import "../styles/suporte.css";
 
@@ -62,14 +64,37 @@ const Suporte = () => {
                         answer="Nosso objetivo é responder às consultas de suporte dentro de 24 horas úteis."
                     />
                     <FaqItem
-                        question="Qual é a política de reembolso?"
-                        answer="Nossa política de reembolso permite que você solicite um reembolso total dentro de 30 dias após a compra, se não estiver satisfeito com nossos serviços."
+                        question="Como posso monitorar o nível da água na caixa d'água?"
+                        answer="Você pode monitorar o nível da água diretamente pelo nosso dashboard, que fornece atualizações em tempo real."
                     />
                     <FaqItem
-                        question="Posso alterar meu plano de assinatura?"
-                        answer="Sim, você pode alterar seu plano de assinatura a qualquer momento na seção de configurações da sua conta."
+                        question="Como configurar alertas de nível de água?"
+                        answer="Você pode configurar alertas de nível de água nas configurações do seu painel de controle, definindo os níveis críticos para receber notificações."
                     />
-                    {/* Adicione mais FaqItems conforme necessário */}
+                    <FaqItem
+                        question="O que devo fazer se não estiver recebendo notificações de alerta?"
+                        answer="Verifique se as notificações estão ativadas nas configurações do seu dispositivo e no painel de controle do sistema. Caso o problema persista, entre em contato com o suporte."
+                    />
+                    <FaqItem
+                        question="Como acessar o histórico de dados da minha caixa d'água?"
+                        answer="Você pode acessar o histórico de dados na seção 'Histórico' do seu dashboard, onde poderá visualizar registros de nível de água, temperatura e umidade."
+                    />
+                    <FaqItem
+                        question="Posso integrar o sistema com outros dispositivos inteligentes?"
+                        answer="Sim, nosso sistema permite integração com diversos dispositivos inteligentes. Consulte o manual de integração disponível na seção de suporte do site."
+                    />
+                    <FaqItem
+                        question="Quais são as opções de suporte disponíveis?"
+                        answer="Oferecemos suporte via e-mail, chat ao vivo e telefone. Nossos canais de suporte estão disponíveis de segunda a sexta-feira, das 9h às 18h."
+                    />
+                    <FaqItem
+                        question="Como posso ajustar as configurações de temperatura e umidade?"
+                        answer="As configurações de temperatura e umidade podem ser ajustadas diretamente no dashboard, na seção de 'Configurações'."
+                    />
+                    <FaqItem
+                        question="O que fazer se os dados do sensor parecem incorretos?"
+                        answer="Primeiro, verifique se o sensor está instalado corretamente e se não há obstruções. Caso os dados ainda pareçam incorretos, entre em contato com nosso suporte técnico para assistência."
+                    />
                 </div>
                 <div className="form-container">
                     <h2>Entre em Contato</h2>
@@ -113,3 +138,11 @@ const Suporte = () => {
 };
 
 export default Suporte;
+
+
+
+
+
+
+
+
