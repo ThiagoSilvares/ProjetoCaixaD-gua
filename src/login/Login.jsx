@@ -11,7 +11,7 @@ export const Login = () => {
     async function submit(e) {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:8000/", { email, password })
+            await axios.post("http://localhost:27017/", { email, password })
             .then(res => {
                 if (res.data === "exist") {
                     history("/home");
