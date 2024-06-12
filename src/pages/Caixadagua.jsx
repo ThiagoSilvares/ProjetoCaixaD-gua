@@ -23,7 +23,7 @@ const Caixadagua = () => {
     if (!lineChartRef.current || !barChartRef.current || !humidityChartRef.current || !temperatureChartRef.current || !tensionChartRef.current) return;
 
     const lineChartData = {
-      labels: ["01/05/2024", "02/05/2024", "03/05/2024", "04/05/2024", "05/05/2024"],
+      labels: ["08/06/2024", "09/06/2024", "10/06/2024", "11/06/2024", "12/06/2024"],
       datasets: [
         {
           label: "Nível da Água ao Longo do Tempo",
@@ -139,7 +139,7 @@ const Caixadagua = () => {
     };
 
     const tensionChartData = {
-      labels: ["01/05/2024", "02/05/2024", "03/05/2024", "04/05/2024", "05/05/2024"],
+      labels: ["08/06/2024", "09/06/2024", "10/06/2024", "11/06/2024", "12/06/2024"],
       datasets: [
         {
           label: "Tensão da Placa ao Longo do Tempo",

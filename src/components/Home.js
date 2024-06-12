@@ -14,7 +14,7 @@ const Home = () => {
     { item: "Alertas", value: Math.random() * 100 },
     { item: "Histórico", value: Math.random() * 100 },
     { item: "Suporte", value: Math.random() * 100 },
-    { item: "Configurações", value: Math.random() * 100 },
+    { item: "Perfil", value: Math.random() * 100 },
   ];
 
   const renderChart = () => {
@@ -31,7 +31,7 @@ const Home = () => {
         return <Bar data={chartData} xField="item" yField="value" />;
       case "/suporte":
         return <Column data={chartData} xField="item" yField="value" />;
-      case "/configuracoes":
+      case "/Perfil":
         return <Line data={chartData} xField="item" yField="value" />;
       default:
         return null;

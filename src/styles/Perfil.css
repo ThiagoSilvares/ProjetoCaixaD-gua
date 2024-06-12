@@ -1,0 +1,99 @@
+.container {
+    position: absolute;
+    top: 64px;
+    left: 200px; 
+    right: 0;
+    bottom: 0;
+    overflow: auto; 
+    padding: -25px; 
+    box-sizing: border-box;
+  }
+  
+  .content {
+    max-width: calc(100% - 90px); 
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .form-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+    max-width: calc(100% - 90px); 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: none; 
+  }
+  
+  .form-container button {
+    background-color: rgba(7, 0, 105);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .form-container button:hover {
+    background-color: rgb(17, 3, 214);
+  }
+  
+  .info {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: left;
+    margin-top: 5px;
+  }
+  
+  .logoutButton button {
+    background-color: #ff0000; /* Cor vermelha */
+    color: #fff; /* Cor do texto */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .logoutButton button:hover {
+    background-color: #cc0000; /* Cor de realce vermelha mais escura ao passar o mouse */
+  }

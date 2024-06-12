@@ -14,7 +14,7 @@ export const Login = () => {
             await axios.post("http://localhost:8000/", { email,password })
             .then(res => {
                 if (res.data === "exist") {
-                    history("/home");
+                    history("/smartlights");
 
                 } else if (res.data === "notexist") {
                     alert("User have not signed up");

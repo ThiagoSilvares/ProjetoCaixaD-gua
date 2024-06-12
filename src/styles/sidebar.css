@@ -1,4 +1,3 @@
-
 .navbar {
   background: #fff;
   padding: 0;
@@ -43,12 +42,19 @@
   right: 10px;
   display: flex;
   align-items: center;
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+  padding: 5px 10px; 
+  border-radius: 10px; 
 }
 
-.profileImage {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+.userInfoContainer:hover {
+  background-color: rgb(245, 245, 245); 
+}
+
+.profileIcon {
+  font-size: 34px; 
+  color: #000;
   margin-right: 10px;
 }
 
@@ -73,16 +79,18 @@
   .searchContainer {
     display: none;
   }
-  
+
   .userInfoContainer {
     flex-direction: column;
     align-items: flex-start;
   }
-  
-  .userName, .userEmail {
+
+  .userName,
+  .userEmail {
     font-size: 0.8em;
   }
 }
+
 .sidebar {
   position: fixed;
   top: 64px;
@@ -127,12 +135,11 @@
   transform: translateY(-11px) rotate(-45deg);
 }
 
-/* Responsividade */
 @media screen and (max-width: 992px) {
   .sidebar {
     transform: translateX(-100%);
   }
-  
+
   .hamburger {
     display: flex;
   }
@@ -188,4 +195,3 @@
 .sidebar {
   background-color: white;
 }
-

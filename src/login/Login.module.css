@@ -8,8 +8,9 @@
     background-image: url('../images/imagemfundo.jpg');
     background-size: cover;
     background-position: center;
+    position: fixed;
   }
-  
+
   .authFormContainer {
     display: flex;
     flex-direction: column;

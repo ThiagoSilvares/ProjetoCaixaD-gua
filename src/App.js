@@ -6,7 +6,7 @@ import Caixadagua from "./pages/Caixadagua";
 import Suporte from "./pages/Suporte";
 import Historico from "./pages/Historico";
 import Alertas from "./pages/Alertas";
-import Configuracoes from "./pages/Configuracoes";
+import Perfil from "./pages/Perfil";
 import SmartLights from "./pages/SmartLights";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -20,7 +20,7 @@ function SidebarLayout() {
         {/* <Route path="/caixadagua" element={<Caixadagua />} /> */}
         <Route path="/suporte" element={<Suporte />} />
         <Route path="/historico" element={<Historico />} />
-        <Route path="/configuracoes" element={<Configuracoes />} />
+        <Route path="/Perfil" element={<Perfil />} />
         <Route path="/smartlights" element={<SmartLights />} />
         <Route path="/alertas" element={<Alertas />} />
       </Routes>

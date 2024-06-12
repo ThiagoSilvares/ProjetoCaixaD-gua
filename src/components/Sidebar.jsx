@@ -1,30 +1,35 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   HomeOutlined,
   BulbOutlined,
   BellOutlined,
   ClockCircleOutlined,
   CustomerServiceOutlined,
-  SettingOutlined,
+  UserOutlined,
+  SearchOutlined,
 } from "@ant-design/icons";
 import "../styles/sidebar.css";
 import Automacao from "../images/automacao.png";
-import Profile from "../images/profile.png";
 import { Layout, Menu } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
 
 const { Header, Sider, Content } = Layout;
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleProfileClick = () => {
+    navigate("/Perfil");
+  };
+
   return (
     <Header className="navbar">
       <div className="searchContainer">
         <SearchOutlined className="searchIcon" />
         <input type="text" placeholder="Procure aqui" className="searchInput" />
       </div>
-      <div className="userInfoContainer">
-        <img src={Profile} alt="Profile" className="profileImage" />
+      <div className="userInfoContainer" onClick={handleProfileClick}>
+        <UserOutlined className="profileIcon" />
         <div className="userInfo">
           <div className="userName">Thiago Silvares</div>
           <div className="userEmail">22.01819-0@maua.br</div>
@@ -34,21 +39,29 @@ const Navbar = () => {
   );
 };
 
-
 const Sidebar = () => {
   const location = useLocation();
+  const [selectedKey, setSelectedKey] = useState(location.pathname);
+
+  useEffect(() => {
+    setSelectedKey(location.pathname);
+  }, [location]);
+
+  const handleMenuItemClick = (e) => {
+    setSelectedKey(e.key);
+  };
 
   return (
     <Sider
       className="sidebar"
       style={{
-        position: 'fixed',
+        position: "fixed",
         top: 0,
         left: 0,
-        height: '100%',
+        height: "100%",
         zIndex: 2,
-        overflow: 'auto',
-        background: '#fff'
+        overflow: "auto",
+        background: "#fff",
       }}
     >
       <div className="logoContainer">
@@ -56,13 +69,17 @@ const Sidebar = () => {
           <img src={Automacao} alt="" className="Automacao" />
         </div>
         <div className="titleContainer">
-          <h2 className="title" style={{ color: '#05004e' }}>Automação Mauá</h2>
+          <h2 className="title" style={{ color: "#05004e" }}>
+            Automação Mauá
+          </h2>
         </div>
       </div>
       <Menu
         mode="inline"
-        defaultSelectedKeys={[location.pathname]}
-        style={{ background: '#fff' }}
+        defaultSelectedKeys={[selectedKey]}
+        selectedKeys={[selectedKey]}
+        onClick={handleMenuItemClick}
+        style={{ background: "#fff" }}
       >
         <Menu.Item key="/" icon={<HomeOutlined />}>
           <a href="/">Caixa D’Água</a>
@@ -79,8 +96,8 @@ const Sidebar = () => {
         <Menu.Item key="/suporte" icon={<CustomerServiceOutlined />}>
           <a href="/suporte">Suporte</a>
         </Menu.Item>
-        <Menu.Item key="/configuracoes" icon={<SettingOutlined />}>
-          <a href="/configuracoes">Configurações</a>
+        <Menu.Item key="/Perfil" icon={<UserOutlined />}>
+          <a href="/Perfil">Perfil</a>
         </Menu.Item>
       </Menu>
     </Sider>
